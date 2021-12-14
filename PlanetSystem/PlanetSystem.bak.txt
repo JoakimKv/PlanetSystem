@@ -1,0 +1,86 @@
+//Microsoft Developer Studio generated resource script.
+//
+
+
+
+#include "resource.h"
+#include "afxres.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTBOX DIALOG DISCARDABLE  32, 32, 180, 100
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,80,50,14
+    ICON            "PLANETSYSTEM",IDC_STATIC,7,7,20,20
+    CTEXT           "PlanetSystem",IDC_STATIC,40,12,100,8
+    CTEXT           "PlanetSystem simulator for Windows",IDC_STATIC,7,40,166,
+                    8
+    CTEXT           "by Joakim Kvistholm",IDC_STATIC,7,52,166,8
+END
+
+PLANETSYSTEMNEWDLG DIALOGEX 16, 16, 215, 208
+STYLE WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Planetary Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "The planetary system:",IDC_STATIC,22,7,157,15,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_SUNS,175,28,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of suns?:",IDC_STATIC,22,28,134,13
+    EDITTEXT        IDC_PLANETS,175,50,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of planets?:",IDC_STATIC,22,50,127,13
+    EDITTEXT        IDC_MAX_MOONS,175,74,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Maximum number of moons circling around a planet?:",
+                    IDC_STATIC,22,74,143,26
+    DEFPUSHBUTTON   "OK",IDOK,17,184,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,81,184,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+PLANETSYSTEM MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                IDM_FILE_NEW
+        MENUITEM "E&xit",                       IDM_APP_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help...",                    IDM_APP_HELP
+        MENUITEM "&About PlanetSystem version 1.0...", IDM_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+PLANETSYSTEM ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDM_APP_HELP,           VIRTKEY, NOINVERT
+    "^N",           IDM_FILE_NEW,           ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+PLANETSYSTEM            ICON    DISCARDABLE     "PlanetSystem.ico"
+

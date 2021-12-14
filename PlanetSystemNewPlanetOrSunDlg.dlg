@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------------------
+   PlanetSystemNewPlanetOrSunDlg.dlg - Dialog for adding suns and planets.
+---------------------------------------------------------------------------*/
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+
+PLANETSYSTEMNEWPLANETORSUNDLG DIALOGEX 16, 16, 180, 97
+STYLE WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Changing the planetary system"
+FONT 8, "MS Sans Serif"
+BEGIN
+    // Planet System
+    LTEXT           "The solar system:",IDC_STATIC,22,7,175,15,NOT WS_GROUP
+    EDITTEXT        IDC_NEW_SUNS,143,28,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of suns to be added?:",IDC_STATIC,22,28,120,13
+    EDITTEXT        IDC_NEW_PLANETS,143,50,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of planets to be added?:",IDC_STATIC,22,50,120,13
+
+    DEFPUSHBUTTON   "OK",IDOK,17,75,50,14,WS_GROUP
+END
+

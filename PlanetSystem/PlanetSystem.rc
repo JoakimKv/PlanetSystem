@@ -1,0 +1,83 @@
+//Microsoft Developer Studio generated resource script.
+//
+
+#include "resource.h"
+#include "afxres.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTBOX DIALOG DISCARDABLE  32, 32, 180, 100
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,80,50,14
+    ICON            "PLANETSYSTEM",IDC_STATIC,7,7,20,20
+    CTEXT           "PlanetSystem",IDC_STATIC,40,12,100,8
+    CTEXT           "PlanetSystem simulator for Windows",IDC_STATIC,7,40,166,8
+    CTEXT           "by Joakim Kvistholm",IDC_STATIC,7,52,166,8
+END
+
+// Dialog in planetsystem asking for number of planets, suns and moons.
+#include "PlanetSystemNewDlg.dlg"
+
+// Dialog in planetsystem asking for number of planets or suns to be removed.
+#include "PlanetSystemDeleteDlg.dlg"
+
+// Dialog in planetsystem asking for number of planets or suns to be added.
+#include "PlanetSystemNewPlanetOrSunDlg.dlg"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+PLANETSYSTEM MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Solar System...\tCtrl+N",       IDM_FILE_NEW
+        MENUITEM "E&xit",                              IDM_APP_EXIT
+    END
+
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "A&dd planets or suns...\tCtrl+T"   , IDM_EDIT_ADDPLANETORSUN
+        MENUITEM "&Delete planets or suns...\tCtrl+M", IDM_EDIT_DELETEPLANETORSUN
+
+    END
+
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help...",                           IDM_APP_HELP
+        MENUITEM "&About PlanetSystem version 1.0...", IDM_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+PLANETSYSTEM ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          IDM_APP_HELP,                 VIRTKEY, NOINVERT
+    "^N",           IDM_FILE_NEW,                 ASCII,  NOINVERT
+    "^M",           IDM_EDIT_DELETEPLANETORSUN,   ASCII,  NOINVERT
+    "^T",           IDM_EDIT_ADDPLANETORSUN,      ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+PLANETSYSTEM            ICON    DISCARDABLE     "PlanetSystem.ico"

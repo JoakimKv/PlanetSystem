@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------------------
+   PlanetSystemNewDlg.dlg - Dialog for a new Planet system - where the user
+   can choose the number of Planets, Suns and Moons.
+---------------------------------------------------------------------------*/
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+
+PLANETSYSTEMNEWDLG DIALOGEX 16, 16, 230, 128
+STYLE WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Planetary Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    // Planet System
+    LTEXT           "The solar system:",IDC_STATIC,22,7,175,15,NOT WS_GROUP
+    EDITTEXT        IDC_SUNS,198,28,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of suns?:",IDC_STATIC,22,28,134,13
+    EDITTEXT        IDC_PLANETS,198,50,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Number of planets?:",IDC_STATIC,22,50,127,13
+    EDITTEXT        IDC_MAX_MOONS,198,74,20,12,ES_NUMBER,WS_EX_STATICEDGE
+    LTEXT           "Maximum number of moons circling around a planet?:",IDC_STATIC,22,74,170,14
+    LTEXT           "(The moons are not implemented yet, they are under construction.)",IDC_STATIC,22,83,170,20
+
+    DEFPUSHBUTTON   "OK",IDOK,17,106,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,81,106,50,14,WS_GROUP
+END
+
+
